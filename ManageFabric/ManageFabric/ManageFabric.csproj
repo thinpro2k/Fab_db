@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73E2CBA0-CFF3-40D2-B6A5-C185B77F692D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ManageFabric</RootNamespace>
+    <AssemblyName>ManageFabric</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBOracleUtils.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="TableLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableLogin.Designer.cs">
+      <DependentUpon>TableLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableCategory.Designer.cs">
+      <DependentUpon>TableCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableCustomer.Designer.cs">
+      <DependentUpon>TableCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableManager.Designer.cs">
+      <DependentUpon>TableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableNewCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableNewCate.Designer.cs">
+      <DependentUpon>TableNewCate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableNewCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableNewCus.Designer.cs">
+      <DependentUpon>TableNewCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableNewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableNewSupplier.Designer.cs">
+      <DependentUpon>TableNewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableProfile.Designer.cs">
+      <DependentUpon>TableProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableReport.Designer.cs">
+      <DependentUpon>TableReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableSupplier.Designer.cs">
+      <DependentUpon>TableSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableUpdateCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableUpdateCate.Designer.cs">
+      <DependentUpon>TableUpdateCate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableUpdateCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableUpdateCus.Designer.cs">
+      <DependentUpon>TableUpdateCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableUpdateSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableUpdateSup.Designer.cs">
+      <DependentUpon>TableUpdateSup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TableLogin.resx">
+      <DependentUpon>TableLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TableCategory.resx">
+      <DependentUpon>TableCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableCustomer.resx">
+      <DependentUpon>TableCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableManager.resx">
+      <DependentUpon>TableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableNewCate.resx">
+      <DependentUpon>TableNewCate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableNewCus.resx">
+      <DependentUpon>TableNewCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableNewSupplier.resx">
+      <DependentUpon>TableNewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableProfile.resx">
+      <DependentUpon>TableProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableReport.resx">
+      <DependentUpon>TableReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableSupplier.resx">
+      <DependentUpon>TableSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableUpdateCate.resx">
+      <DependentUpon>TableUpdateCate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableUpdateCus.resx">
+      <DependentUpon>TableUpdateCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableUpdateSup.resx">
+      <DependentUpon>TableUpdateSup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="oci.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Oracle.DataAccess.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oramts.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oramts12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oramtsus.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="orannzsbb12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oraocci12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oraocci12d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oraociei12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oraons.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OraOps12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
